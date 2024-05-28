@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# shebang line - The first match in the $PATH environment variable.
+# script that accepts one argument, should run the whoami command under the user passed as an argument
+sudo -u "$1" bash -c 'whoami'

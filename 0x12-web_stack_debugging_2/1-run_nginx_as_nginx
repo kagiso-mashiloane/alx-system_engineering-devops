@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# shebang line - The first match in the $PATH environment variable.
+# script that configures the container - requirements
+sudo netstat -tulpn | grep LISTEN
+sudo pkill -f apache2
+sudo chown -R nginx:nginx /etc/nginx/nginx.conf
+sudo chmod 644 /etc/nginx/nginx.conf
+sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+sudo -u "nginx" bash -c 'service nginx restart'
