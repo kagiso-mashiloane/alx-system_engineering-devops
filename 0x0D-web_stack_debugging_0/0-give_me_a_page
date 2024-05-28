@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# shebang line - The first match in the $PATH environment variable.
+# command(s) you used to fix the issue
+sudo service apache2 start
